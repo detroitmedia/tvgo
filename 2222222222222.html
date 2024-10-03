@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor Video.js con Marca de Agua</title>
+    <!-- Agrega la librería Video.js -->
+    <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
+</head>
+<body>
+    <!-- Contenedor para el reproductor -->
+    <video id="myVideo" class="video-js vjs-default-skin" controls preload="auto" width="850%" height="auto">
+        <source src="https://app.viloud.tv/hls/channel/0740ce1946a02284a24b3d0a95972493.m3u8" type="application/x-mpegURL">
+        <!-- Agrega tu marca de agua o logotipo como superposición -->
+        <div class="vjs-overlay" style="position: absolute; top: 10px; right: 10px;">
+            <img src="https://webhost.iclgc.com/wp-content/uploads/2024/04/moscaditri.png"alt="moscaditri.png">
+        </div>
+    </video>
+
+    <script>
+        // Inicializa el reproductor Video.js
+        var player = videojs("myVideo");
+    </script>
+</body>
+</html>
